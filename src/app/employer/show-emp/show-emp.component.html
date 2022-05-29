@@ -1,0 +1,74 @@
+<!-- Button trigger modal -->
+<button
+    type="button"
+    class="btn btn-primary"
+    data-bs-toggle="modal"
+    data-bs-target="#exampleModal"
+    (click)="addClick()"
+    data-backdrop="static"
+    data-keyboard="false"
+>
+    Launch demo modal
+</button>
+
+<!-- Modal -->
+<div
+    class="modal fade"
+    id="exampleModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
+                    {{ modalTitle }}
+                </h5>
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                    (click)="closeClick()"
+                ></button>
+            </div>
+            <div class="modal-body">
+                <!-- <app-add-edit-emp
+                    [emp]="emp"
+                    *ngIf="ActiveModal"
+                ></app-add-edit-emp> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Tên</th>
+            <th scope="col">Đia chi</th>
+            <th scope="col">vi ti</th>
+            <th scope="col">Logo</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let item of EmployerList.results">
+        <tr>
+            <th>{{ item.name }}</th>
+            <th>{{ item.location }}</th>
+            <th>{{ item.address }}</th>
+            <th>
+                <img src="{{ item.logo }}" alt="{{ item.name }}" srcset="" />
+            </th>
+            <th>
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                ></button>
+            </th>
+        </tr>
+    </tbody>
+</table>
