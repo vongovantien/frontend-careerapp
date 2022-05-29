@@ -7,7 +7,7 @@ import { Employer } from './models/employer/employer.model.';
     providedIn: 'root',
 })
 export class ShareService {
-    readonly baseUrl = 'https://backend-careerapp.herokuapp.com/';
+    readonly baseUrl = 'https://backend-careerapp.herokuapp.com';
     readonly PhotoUrl = 'https://backend-careerapp.herokuapp.com/media';
     constructor(private http: HttpClient) {}
 
