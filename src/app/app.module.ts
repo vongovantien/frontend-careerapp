@@ -10,10 +10,13 @@ import { ShareService } from './share.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SingleEmpComponent } from './employer/single-emp/single-emp.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
+
 @NgModule({
     declarations: [
         AppComponent,
-        EmployerComponent,
         ShowEmpComponent,
         AddEditEmpComponent,
         SingleEmpComponent,
@@ -24,6 +27,9 @@ import { SingleEmpComponent } from './employer/single-emp/single-emp.component';
         HttpClientModule,
         FormsModule,
         ReactiveFormsModule,
+        BrowserAnimationsModule,
+        MatPaginatorModule,
+        MatTableDataSource,
     ],
     providers: [ShareService],
     bootstrap: [AppComponent],
