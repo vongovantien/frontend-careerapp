@@ -1,5 +1,5 @@
-import { Employer } from './../../models/employer/employer.model.';
-import { ShareService } from './../../share.service';
+import { Employer } from '../../core/models/employer.model.';
+import { ShareService } from '../../core/services/share.service';
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';

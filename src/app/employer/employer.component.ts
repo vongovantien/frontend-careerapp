@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Employer } from '../models/employer/employer.model.';
+import { Employer } from '../core/models/employer.model.';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 @Component({
